@@ -67,3 +67,5 @@ th {
 tr:nth-child(even) {
   background: #f8fafc;
 }
+.delete-btn { background: #ef4444; border: none; color: white; padding: 4px 7px; border-radius: 4px; cursor:pointer; }
+.delete-btn:hover { background: #dc2626; }
