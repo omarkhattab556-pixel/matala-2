@@ -35,5 +35,15 @@ addCarForm.addEventListener('submit', event => {
   renderCars();
   addCarForm.reset();
 });
+carTableBody.addEventListener('click', event => {
+  if (event.target.matches('.delete-btn')) {
+    const index = parseInt(event.target.dataset.index, 10);
+    removeCar(index);
+  }
+});
 
+function removeCar(index) {
+  cars.splice(index, 1);
+  renderCars();
+}
 renderCars();
