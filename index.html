@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>פרויקט רכבים פשוט</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>פרויקט רכבים</h1>
+    <p>אתר תצוגת רכבים פשוט ב-HTML, CSS ו-JS</p>
+  </header>
+
+  <main>
+    <section class="car-form">
+      <h2>הוסף רכב חדש</h2>
+      <form id="addCarForm">
+        <label>
+          דגם:
+          <input type="text" id="model" required />
+        </label>
+        <label>
+          יצרן:
+          <input type="text" id="maker" required />
+        </label>
+        <label>
+          שנה:
+          <input type="number" id="year" min="1900" max="2100" required />
+        </label>
+        <label>
+          מחיר (₪):
+          <input type="number" id="price" min="0" required />
+        </label>
+        <button type="submit">הוסף רכב</button>
+      </form>
+    </section>
+
+    <section class="car-list">
+      <h2>רשימת רכבים</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>יצרן</th>
+            <th>דגם</th>
+            <th>שנה</th>
+            <th>מחיר</th>
+          </tr>
+        </thead>
+        <tbody id="carTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
