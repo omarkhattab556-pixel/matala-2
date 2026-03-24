@@ -9,13 +9,14 @@ const addCarForm = document.getElementById('addCarForm');
 
 function renderCars() {
   carTableBody.innerHTML = '';
-  cars.forEach(car => {
+  cars.forEach((car, i) => {
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${car.maker}</td>
       <td>${car.model}</td>
       <td>${car.year}</td>
       <td>${car.price.toLocaleString()} ₪</td>
+      <td><button class='delete-btn' data-index='${i}'>מחק</button></td>
     `;
     carTableBody.appendChild(row);
   });
